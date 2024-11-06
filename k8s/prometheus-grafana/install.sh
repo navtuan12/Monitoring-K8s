@@ -1,11 +1,10 @@
 #!/bin/bash
 
 git clone https://github.com/prometheus-operator/kube-prometheus.git
-cd kube-prometheus
 
-mv ~/NT531/k8s/prometheus-grafana/grafana-ingress.yaml ~/NT531/k8s/prometheus-grafana/kube-prometheus/manifests/grafana-ingress.yaml
-mv ~/NT531/k8s/prometheus-grafana/prometheus-ingress.yaml ~/NT531/k8s/prometheus-grafana/kube-prometheus/manifests/prometheus-ingress.yaml
-mv ~/NT531/k8s/prometheus-grafana/alertmanager-ingress.yaml ~/NT531/k8s/prometheus-grafana/kube-prometheus/manifests/alertmanager-ingress.yaml
+mv grafana-ingress.yaml kube-prometheus/manifests/grafana-ingress.yaml
+mv prometheus-ingress.yaml kube-prometheus/prometheus-ingress.yaml
+mv alertmanager-ingress.yaml kube-prometheus/manifests/alertmanager-ingress.yaml
 
-kubectl create -f ~/NT531/k8s/prometheus-grafana/kube-prometheus/manifests/setup
-kubectl create -f ~/NT531/k8s/prometheus-grafana/kube-prometheus/manifests
+kubectl create -f kube-prometheus/manifests/setup
+kubectl create -f kube-prometheus/manifests

@@ -47,12 +47,3 @@ resource "aws_efs_mount_target" "efs_mount_target_b" {
     aws_security_group.efs_sg.id
   ]
 }
-
-output "efs_file_system_id" {
-  value = aws_efs_file_system.efs.id
-}
-
-output "efs_mount_targets" {
-  value = [aws_efs_mount_target.efs_mount_target_a.id, aws_efs_mount_target.efs_mount_target_b.id]
-}
-

@@ -7,6 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/use-regex: "true"
     nginx.ingress.kubernetes.io/port: "8080"
 spec:
+  ingressClassName: nginx
   rules:
     - host: api.devnoneknow.online
       http:
