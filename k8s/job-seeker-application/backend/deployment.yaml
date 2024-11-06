@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: noneknow12/job-seeker-backend:v2
+          image: noneknow12/job-seeker-backend:v5
           ports:
             - containerPort: 8080
           env:
